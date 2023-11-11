@@ -1,0 +1,90 @@
+.view-recipes-container {
+  text-align: center;
+  margin: 20px;
+  font-family: Arial, sans-serif;
+  /* background-image: url('../components/image/bg.jpg');
+  background-size:contain;
+  background-repeat: repeat; */
+  background-color: #083e0a;
+}
+
+/* Title Styles */
+.view-recipes-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Recipe Item Styles */
+.recipe-item {
+  max-width: 681px; /* Adjust the maximum width as needed */
+  margin: 32px auto;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+  padding: 20px;
+}
+
+.recipe-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}*/
+
+/* Recipe Name Styles */
+.recipe-name {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+  font-size: 24px;
+  color: #333;
+}
+
+/* Ingredients List Styles */
+.ingredients-list {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-top: 10px;
+  font-size: 16px;
+  color: #555;
+}
+
+/* Recipe Instructions Styles */
+.recipe-instructions {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #444;
+}
+
+/* Recipe Image Styles */
+.recipe-image {
+  max-width: 40%;
+  height: auto;
+  margin-top: 20px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Cooking Time Styles */
+.cooking-time {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Save Button Styles */
+.save-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.save-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+} 

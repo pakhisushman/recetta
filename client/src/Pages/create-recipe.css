@@ -1,0 +1,82 @@
+/* create-recipe.css */
+
+/* Styling for the entire page */
+.create-recipe-body {
+    margin: 0;
+    padding: 0;
+    background-image: url('../components/image/chili-spices-food-herbs-4ufm5tuhg74cif8b.jpg'); 
+    background-size:cover;
+    /* Additional body styles */
+  }
+  .create-recipe h2 {
+    color: #c8d681; /* Change text color */
+    font-size: 40px; /* Adjust font size */
+    margin-bottom: 30px;
+   
+    /* Add margin at the bottom */
+    /* Additional styles for h2 */
+    font-family: 'Your Custom Font', sans-serif;
+  }
+  
+  /* Styling for the container */
+  .create-recipe {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 40px;
+    background-color: rgba(55, 47, 47, 0.5);
+    
+   /*background-image: url('https://img.freepik.com/free-photo/antique-wall-with-stains_1154-728.jpg?size=626&ext=jpg&ga=GA1.1.642372726.1698519460&semt=ais');
+    background-size: cover;*/
+    /* background-image: url('../components/image/chilli.avif');
+    background-size: cover; */
+    
+    
+    /* Additional container styles */
+  }
+  
+  /* Styling for the form within the container */
+  .create-recipe form {
+    display: grid;
+    gap: 20px;
+    /* Additional form styles */
+  }
+  
+  .create-recipe-group {
+    display: grid;
+    gap: 5px;
+    
+    /* Additional styles for form groups */
+  }
+  .create-recipe label{
+    color: #c8d681;
+  }
+  
+  .create-recipe label {
+    font-weight: bold;
+    /* Additional label styles */
+  }
+  
+  .create-recipe input[type="text"],
+  .create-recipe input[type="number"],
+  .create-recipe textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 50px; /* Adjust the value to make it more or less circular */
+    box-sizing: border-box;
+    /* Additional input and textarea styles */
+  }
+  .create-recipe button{
+    padding: 10px 20px;
+    background-color:#c8d681;
+    color: #0c0c0c;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .create-recipe button:hover {
+    background-color: #0056b3;
+  }

@@ -1,0 +1,71 @@
+/* Add your custom styles here */
+/* Add your custom styles here */
+.nutri_body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../components/image/top-close-up-view-vegetables-tomatoes-with-pedicels-garlic-bell-peppers-lemon-oil-onion.jpg');
+    height: 100vh;
+    background-size: cover;
+  }
+  
+  .nutrition_body {
+    padding: 50px;
+    
+    
+    
+    background-color: rgba(137, 78, 78, 0.6);
+    
+  }
+  
+  /* Other styles */
+  
+ 
+  
+  .nutri_form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  input[type='text'] {
+    padding: 8px;
+    margin-right: 10px;
+  }
+  
+  .nutri_button {
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  .error {
+    color: red;
+    margin-bottom: 15px;
+  }
+  
+  div.nutritional-info {
+    text-align: left;
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 20px;
+    display: inline-block;
+    text-align: left;
+  }
+  
+  div.nutritional-info h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  div.nutritional-info p {
+    margin: 5px 0;
+  }

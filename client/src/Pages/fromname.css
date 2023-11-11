@@ -1,0 +1,70 @@
+.fromname_body1
+{  
+    height:100vh;
+    width: 500vh;
+    size: relative;
+    background-color:  rgba(24, 23, 23, 0.5);
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 100px;
+}
+.fromname_body{
+  padding-top: 50px;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #4CAF50; */
+    /* background-image: url('../components/image/various-colorful-cherry-tomatoes.jpg'); */
+    /* background-size: cover; */
+    font-family: 'Lato' !important;
+  }
+  .search-box {
+    text-align: center;
+    padding-top: 200px;
+    /* padding: 20px; */
+    margin-top: 20px;
+  }
+  
+  .head, p {
+    /* padding-top: 200px; */
+    color: white;
+    margin: 10px 0;
+  }
+  
+   .recipe-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 5px;
+    cursor: pointer;
+    border-radius: 20px;
+    
+  }
+  
+  .recipe-input {
+    padding-top: 200px;
+    margin: 10px 5px;
+    border-radius: 5px;
+    width: 300px;
+  }
+  .reci{
+    width: 250px;
+    height: 250px;
+  }
+  .recipe-container{
+    /* padding-top: 250px; */
+    /* background-color: rgba(255, 255, 255, 0.7); */
+    padding-left: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+  
+  }
