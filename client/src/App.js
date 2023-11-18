@@ -10,8 +10,9 @@ import { Register } from './Pages/register';
 import { FromIngredients } from './Pages/fromingredients';
 import { FromName } from './Pages/fromname';
 import { FromImage } from './Pages/fromimage';
+import { AboutUs } from './Pages/aboutus';
 import { RecipeNutrition } from './Pages/RecipeNutrition';
-
+import Footer from './Footer';
 
 function App() {
   return (
@@ -29,8 +30,10 @@ function App() {
           <Route path="/fromname" element={<FromName></FromName>}></Route>
           <Route path="/fromimage" element={<FromImage></FromImage>}></Route>
           <Route path="/RecipeNutrition" element={<RecipeNutrition></RecipeNutrition>}></Route>
+          <Route path="/aboutus" element={<AboutUs></AboutUs>}></Route>
         </Routes>
       </Router>
+      <Footer/>
     </div>
   );
 }

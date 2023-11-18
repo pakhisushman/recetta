@@ -13,6 +13,7 @@
     align-items: center;
     background-image: url("../components/image/fresh-colourful-ingredients-mexican-cuisine.jpg");
     background-size: cover;
+    overflow: auto;
     font-family: 'Playfair', serif;
     font-size: x-large;
   }
@@ -23,6 +24,7 @@
     size: relative; 
     background-color: rgba(0, 0, 0, 0.5);
     background-position: center;
+    overflow: auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -78,5 +80,17 @@ button:active {
   color: rgba(0, 0, 0, 0.65);
   transform: translateY(0);
 }
-
-  
+/* .result{
+  margin-top: 500px;
+  position: relative;
+} */
+.result {
+  margin-top: 300px;
+  overflow: auto;
+}
+.recipe {
+  background-color: rgba(255, 255, 255, 0.7);
+  /* margin: 10px; */
+  padding: 10px;
+  margin-top: 10px;
+}

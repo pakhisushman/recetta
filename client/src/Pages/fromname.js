@@ -47,7 +47,7 @@ export const FromName=()=>{
         <div className="recipe-result">
           <h2>{recipe.strMeal}</h2>
           <div className="topi">
-          <img src={recipe.strMealThumb} alt={recipe.strMeal} className="reci" />
+          <img src={recipe.strMealThumb} alt={recipe.strMeal} className="reci"/>
           <div className="ingre">
           <h3>Ingredients:</h3>
           

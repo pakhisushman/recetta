@@ -2,10 +2,16 @@
   text-align: center;
   margin: 20px;
   font-family: Arial, sans-serif;
-  /* background-image: url('../components/image/bg.jpg');
-  background-size:contain;
-  background-repeat: repeat; */
-  background-color: #083e0a;
+   background-image: url('../components/image/bg.jpg');
+  background-size:cover;
+  overflow: auto;
+  /* background-repeat: repeat; */
+  /* background-color: #083e0a; */
+}
+.view-recipes-cont2
+{
+  background-color: rgba(0, 0, 0, 0.2);
+  overflow: auto;
 }
 
 /* Title Styles */
@@ -43,7 +49,7 @@
 
 /* Ingredients List Styles */
 .ingredients-list {
-  list-style-type: disc;
+  list-style-type: none;
   padding-left: 20px;
   margin-top: 10px;
   font-size: 16px;
@@ -88,3 +94,15 @@
   background-color: #ccc;
   cursor: not-allowed;
 } 
+.search-bar {
+  margin-top: 20px;
+ 
+}
+
+.search-bar input {
+  padding: 10px;
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}

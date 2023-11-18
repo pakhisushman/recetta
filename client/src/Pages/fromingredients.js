@@ -51,22 +51,21 @@ export const FromIngredients = () => {
   return (
     <div className="cont">
       <div className='cont1'>
-      <h1 className="head">Enter Ingredients</h1>
-      <p>We will find some good recipes with the available ingredients!</p>
-      <form onSubmit={handleSubmit}>
-        <input type="text" value={query} onChange={handleChange} />
-        <button type="submit">Search</button>
-      </form>
-      </div>
-      <div className="recipe-grid">
-        {recipes.map(recipe => (
-          <div key={recipe.id} className="recipe-card">
-            <h2>{recipe.title}</h2>
-            <img className="recipe-image" src={recipe.image} alt={recipe.title} />
-            <button className="btn" onClick={() => getRecipeInstructions(recipe.id)}>
-              View Recipe
-            </button>
-            {selectedRecipe === recipe.id && recipeInstructions.instructions.length > 0 && (
+        <h1 className="head">Enter Ingredients</h1>
+        <p>We will find some good recipes with the available ingredients!</p>
+        <form onSubmit={handleSubmit}>
+          <input type="text" value={query} onChange={handleChange} />
+          <button type="submit">Search</button>
+        </form>
+        <div className="recipe-grid">
+          {recipes.map(recipe => (
+            <div key={recipe.id} className="recipe-card">
+              <h2>{recipe.title}</h2>
+              <img className="recipe-image" src={recipe.image} alt={recipe.title} />
+              <button className="btn" onClick={() => getRecipeInstructions(recipe.id)}>
+                View Recipe
+              </button>
+              {selectedRecipe === recipe.id && recipeInstructions.instructions.length > 0 && (
               <div className="recipe-details">
                 <h2>Instructions:</h2>
                 {recipeInstructions.instructions[0].steps.map((step, index) => (
@@ -86,6 +85,7 @@ export const FromIngredients = () => {
             )}
           </div>
         ))}
+      </div>
       </div>
     </div>
   );

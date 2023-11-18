@@ -5,13 +5,16 @@
 } */
 .cont1
 {
+    padding-top: 50px;
     height:100vh;
     width: 500vh;
     size: relative;
     background-color:  rgba(0, 0, 0, 0.7);
     background-position: center;
+    overflow: auto;
     align-items: center;
     justify-content: center;
+    padding-bottom: 10px;
 }
 .fromname_body1
 {
@@ -20,6 +23,7 @@
     size: relative;
     background-color:  rgba(24, 23, 23, 0.5);
     background-position: center;
+    /* overflow: auto; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -50,8 +54,10 @@
     background-image: url('../components/image/top-view-fruit-composition-feijoa-tangerines-apples-white-background-fruit-vitamine-mellow-ripe.jpg');
     background-size: cover;
     /* background-color: rgba(0, 0, 0, 0.2); */
-    background-repeat: repeat;
+    /* background-repeat: repeat; */
+    overflow: auto;
     font-family: 'Lato' !important;
+    padding-bottom: 10px;
   }
   .search-box{
     width: fit-content;

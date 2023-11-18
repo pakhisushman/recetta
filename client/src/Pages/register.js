@@ -42,7 +42,9 @@ const RegisterNew =()=>{
     setUserName={setUserName}
     password={password}
     setPassword={setPassword}
+    // label={<span style={{ color: 'white' }}>Register</span>}
     label="Register"
+    labelStyle={{color:'white'}}
     passwordType={passwordType}
     setPasswordType={setPasswordType}
     onSubmit={onSubmit}

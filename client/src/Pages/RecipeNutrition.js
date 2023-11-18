@@ -1,91 +1,92 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 import './RecipeNutrition.css';
 
 export const RecipeNutrition = () => {
-  const [recipeName, setRecipeName] = useState('');
+  const [recipe, setRecipe] = useState('');
   const [nutritionData, setNutritionData] = useState(null);
   const [error, setError] = useState(null);
 
-  const API_KEY = '3a54a65f1c794257aad2da31313bbe89';
+  const APP_ID = '1e102cf1';
+  const APP_KEY = '893e2894f999e38f8cf6e020d08ee230';
 
-  const fetchNutritionData = async () => {
+  const handleAnalysis = async () => {
     try {
-      const response = await fetch(
-        `https://api.spoonacular.com/recipes/complexSearch?query=${recipeName}&apiKey=${API_KEY}`
-      );
-
-      if (response.ok) {
-        const data = await response.json();
-        if (data.results.length > 0) {
-          const recipeId = data.results[0].id;
-          getNutritionalInfo(recipeId);
-        } else {
-          setError('No recipe found for the given name');
-          setNutritionData(null);
+      const response = await axios.post(
+        'https://api.edamam.com/api/nutrition-details',
+        {
+          title: 'Sample Recipe',
+          ingr: [recipe],
+        },
+        {
+          params: {
+            app_id: APP_ID,
+            app_key: APP_KEY,
+          },
         }
-      } else {
-        setError('Failed to fetch data');
-        setNutritionData(null);
-      }
-    } catch (error) {
-      setError('Error fetching data');
-      setNutritionData(null);
-    }
-  };
-
-  const getNutritionalInfo = async (recipeId) => {
-    try {
-      const response = await fetch(
-        `https://api.spoonacular.com/recipes/${recipeId}/nutritionWidget.json?apiKey=${API_KEY}`
       );
 
-      if (response.ok) {
-        const data = await response.json();
-        setNutritionData(data);
+      if (response.status === 200) {
+        setNutritionData(response.data);
         setError(null);
       } else {
-        setError('Failed to fetch nutritional information');
+        setError('Failed to fetch nutrition information');
         setNutritionData(null);
       }
     } catch (error) {
-      setError('Error fetching nutritional information');
+      setError('Error fetching nutrition information');
       setNutritionData(null);
     }
   };
 
-  const handleSearch = async (e) => {
-    e.preventDefault();
-    if (recipeName.trim() !== '') {
-      fetchNutritionData();
-    }
+  const renderTable = (data, label) => {
+    return (
+      <div>
+        <h2>{label}</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Nutrient</th>
+              <th>Quantity</th>
+              <th>Unit</th>
+            </tr>
+          </thead>
+          <tbody>
+            {Object.keys(data).map((key) => (
+              <tr key={key}>
+                <td>{data[key].label}</td>
+                <td>{data[key].quantity.toFixed(2)}</td>
+                <td>{data[key].unit}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    );
   };
 
   return (
     <div className='nutri_body'>
-    <div className='nutrition_body'>
-      <h1 style={{ fontSize: '24px', textAlign: 'center'}}>Recipe Nutritional Information</h1>
-      <form className='nutri_form' onSubmit={handleSearch}>
-        <input
-          type="text"
-          value={recipeName}
-          onChange={(e) => setRecipeName(e.target.value)}
-          placeholder="Enter Recipe Name"
-        />
-        <button className='nutri_button' type="submit">Search</button>
-      </form>
+    <div>
+      <div className='nutrition_body'>
+      <h1 >Nutrition Analysis</h1>
+      <textarea 
+        placeholder="Enter recipe ingredients (comma-separated)"
+        value={recipe}
+        onChange={(e) => setRecipe(e.target.value)}
+      />
+      <button className="nutri_button" onClick={handleAnalysis}>Analyze Nutrition</button>
       {error && <p>{error}</p>}
       {nutritionData && (
-        <div>
-          <h2>Nutritional Information</h2>
-          <p>Calories: {nutritionData.calories}</p>
-          <p>Carbs: {nutritionData.carbs}</p>
-          <p>Fat: {nutritionData.fat}</p>
-          <p>Protein: {nutritionData.protein}</p>
-
-          {/* Display other nutritional information as needed */}
+        <div className='output_nutri'>
+          {renderTable(nutritionData.totalNutrients, 'Nutrition Information')}
+          {renderTable(nutritionData.totalDaily, 'Daily Recommended Values')}
         </div>
       )}
     </div>
     </div>
+    </div>
   );
 };
+
+// export default RecipeNutrition;
